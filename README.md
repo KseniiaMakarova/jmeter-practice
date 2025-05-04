@@ -9,8 +9,7 @@ This project allows you to run a JMeter test plan **without installing JMeter GU
 ### 🧩 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/your-repo-name.git
-cd your-repo-name
+git clone https://github.com/KseniiaMakarova/jmeter-practice.git
 ```
 
 ### 🐳 2. Start Docker Engine
