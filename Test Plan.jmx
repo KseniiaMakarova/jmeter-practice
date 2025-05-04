@@ -19,7 +19,7 @@
         <stringProp name="variableNames">username,firstName,lastName,email,password,phone,userStatus</stringProp>
       </CSVDataSet>
       <hashTree/>
-      <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP HeaderManager">
+      <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP HeaderManager" enabled="true">
         <collectionProp name="HeaderManager.headers">
           <elementProp name="accept" elementType="Header">
             <stringProp name="Header.name">accept</stringProp>
@@ -118,31 +118,6 @@
           </kg.apc.jmeter.timers.VariableThroughputTimer>
           <hashTree/>
         </hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Get User Info By Username" enabled="false">
-          <stringProp name="HTTPSampler.domain">petstore.swagger.io</stringProp>
-          <stringProp name="HTTPSampler.protocol">https</stringProp>
-          <stringProp name="HTTPSampler.path">/v2/user/${username}</stringProp>
-          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
-          <stringProp name="HTTPSampler.method">GET</stringProp>
-          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
-          <boolProp name="HTTPSampler.postBodyRaw">false</boolProp>
-          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables">
-            <collectionProp name="Arguments.arguments"/>
-          </elementProp>
-          <stringProp name="HTTPSampler.implementation">HttpClient4</stringProp>
-        </HTTPSamplerProxy>
-        <hashTree>
-          <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Response Assertion">
-            <collectionProp name="Asserion.test_strings">
-              <stringProp name="49586">200</stringProp>
-            </collectionProp>
-            <stringProp name="Assertion.custom_message"></stringProp>
-            <stringProp name="Assertion.test_field">Assertion.response_code</stringProp>
-            <boolProp name="Assertion.assume_success">false</boolProp>
-            <intProp name="Assertion.test_type">8</intProp>
-          </ResponseAssertion>
-          <hashTree/>
-        </hashTree>
         <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Update User">
           <stringProp name="HTTPSampler.domain">petstore.swagger.io</stringProp>
           <stringProp name="HTTPSampler.protocol">https</stringProp>
@@ -208,7 +183,7 @@ Assert.assertEquals(&quot;${idCreatedUser}&quot;, &quot;${idUpdatedUser}&quot;);
           </JSR223Assertion>
           <hashTree/>
         </hashTree>
-        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Delete User">
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="Delete User" enabled="true">
           <stringProp name="HTTPSampler.domain">petstore.swagger.io</stringProp>
           <stringProp name="HTTPSampler.protocol">https</stringProp>
           <stringProp name="HTTPSampler.path">/v2/user/${username}</stringProp>
@@ -233,7 +208,7 @@ Assert.assertEquals(&quot;${idCreatedUser}&quot;, &quot;${idUpdatedUser}&quot;);
           </ResponseAssertion>
           <hashTree/>
         </hashTree>
-        <DebugSampler guiclass="TestBeanGUI" testclass="DebugSampler" testname="Debug Sampler" enabled="false">
+        <DebugSampler guiclass="TestBeanGUI" testclass="DebugSampler" testname="Debug Sampler">
           <boolProp name="displayJMeterProperties">false</boolProp>
           <boolProp name="displayJMeterVariables">true</boolProp>
           <boolProp name="displaySystemProperties">false</boolProp>
@@ -243,7 +218,7 @@ Assert.assertEquals(&quot;${idCreatedUser}&quot;, &quot;${idUpdatedUser}&quot;);
             <stringProp name="filename"></stringProp>
             <stringProp name="parameters"></stringProp>
             <boolProp name="resetInterpreter">false</boolProp>
-            <stringProp name="script">log.info(&quot;Id of created user is: &quot; + vars.get(&quot;idCreatedUser&quot;));</stringProp>
+            <stringProp name="script">log.info(&quot;Username from CSV was used: &quot; + vars.get(&quot;username&quot;));</stringProp>
           </BeanShellPreProcessor>
           <hashTree/>
         </hashTree>
@@ -285,7 +260,7 @@ Assert.assertEquals(&quot;${idCreatedUser}&quot;, &quot;${idUpdatedUser}&quot;);
         </ResultCollector>
         <hashTree/>
       </hashTree>
-      <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report">
+      <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report" enabled="true">
         <boolProp name="ResultCollector.error_logging">false</boolProp>
         <objProp>
           <name>saveConfig</name>
@@ -322,7 +297,7 @@ Assert.assertEquals(&quot;${idCreatedUser}&quot;, &quot;${idUpdatedUser}&quot;);
         <stringProp name="filename"></stringProp>
       </ResultCollector>
       <hashTree/>
-      <ResultCollector guiclass="StatVisualizer" testclass="ResultCollector" testname="Aggregate Report">
+      <ResultCollector guiclass="StatVisualizer" testclass="ResultCollector" testname="Aggregate Report" enabled="true">
         <boolProp name="ResultCollector.error_logging">false</boolProp>
         <objProp>
           <name>saveConfig</name>
