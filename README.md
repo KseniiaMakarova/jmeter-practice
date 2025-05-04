@@ -52,7 +52,7 @@ run-test.bat 500 2
 
 This script:
 - Starts Docker containers via `docker-compose`
-- Runs the test defined in `Test Plan.jmx`
+- Runs tests defined in `Test Plan.jmx`
 - Logs output to `jmeter.log`
 - Does **not require JMeter GUI**
 
@@ -117,3 +117,11 @@ docker-compose down --volumes --rmi all
 ```
 
 ---
+
+## Screenshots
+
+![tg_image_3362978154](https://github.com/user-attachments/assets/167dfb08-82cb-4a9f-871e-a9f83661d37a)
+
+![tg_image_2160821316](https://github.com/user-attachments/assets/d2c3f145-0c08-4ed4-ab53-521d31bf6f61)
+
+![tg_image_4075214641](https://github.com/user-attachments/assets/b024371f-c8c8-4729-a761-af99483ee35a)
