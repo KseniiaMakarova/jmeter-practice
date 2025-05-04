@@ -1,0 +1,11 @@
+username,firstName,lastName,email,password,phone,userStatus
+jsmith,John,Smith,jsmith@example.com,P@ssw0rd123,555-1234,1
+mjones,Mary,Jones,mjones@example.com,SecurePass88,555-5678,0
+bking,Bob,King,bking@example.com,King_2024!,555-9012,1
+lgreen,Lisa,Green,lgreen@example.com,GreenLeaf99,555-3456,0
+awilson,Alex,Wilson,awilson@example.com,Al3xW!lson,555-7890,1
+cwhite,Clara,White,cwhite@example.com,Wh1teC@ke,555-2345,0
+dlee,David,Lee,dlee@example.com,Le3Time$!,555-6789,1
+kscott,Karen,Scott,kscott@example.com,Ks_2025pass,555-0123,0
+tmoore,Tom,Moore,tmoore@example.com,Moore_Pass1,555-4567,1
+rreed,Rachel,Reed,rreed@example.com,Reed2024#,555-8901,0
